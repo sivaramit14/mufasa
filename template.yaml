@@ -14,3 +14,15 @@ Resources:
           Properties:
             Path: /TimeResource
             Method: GET
+  CodePipelineValidateFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: validate.handler
+      Runtime: nodejs10.x
+      Policies:
+       - CodePipelineLambdaExecutionPolicy
+
+Outputs:
+  ApiURL:
+    Description: "API endpoint URL for Prod environment"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/resource/"
