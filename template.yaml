@@ -20,7 +20,7 @@ Resources:
       Handler: validate.handler
       Runtime: nodejs10.x
       Policies:
-       - CodePipelineLambdaExecutionPolicy
+       - CodePipelineLambdaExecutionPolicy: {}
 
 Outputs:
   ApiURL:
