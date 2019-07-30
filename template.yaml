@@ -28,7 +28,7 @@ Resources:
       Runtime: python2.7
       Environment:
         Variables:
-          SLACK_CHANNEL: !Ref aws-alerts
+          SLACK_CHANNEL: aws-alerts
           SLACK_USER: Pipelines
           SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
 
